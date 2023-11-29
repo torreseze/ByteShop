@@ -3,7 +3,7 @@ import { Box, Container, Typography } from "@mui/material";
 const Footer = () => {
   return (
     <Box
-      sx={{ bgcolor: "#24586e", color: "white", mt: 5, py: 5, width: "1935px" }}
+      sx={{ bgcolor: "#24586e", color: "white", mt: 5, py: 5, width: "100%" }}
     >
       <Container maxWidth="xl" sx={{display:'flex', justifyContent:'center', flexDirection:'column'}}>
         <img

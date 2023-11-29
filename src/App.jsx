@@ -7,6 +7,8 @@ import DetailView from './components/category/DetailView'
 import HomeGrid from './layouts/HomePage'
 import { CartProvider } from './context/CartContext'
 import Footer from './layouts/Footer'
+import Error404 from './layouts/404'
+import Cart from './components/cart/Cart'
 
 function App() {
 {/* <div style={{marginRight:'500px', height:'500px', marginTop:'250PX', color:"#000"}}>Detalle</div> */}
@@ -21,8 +23,8 @@ function App() {
         <Route path='detail/:idProduct' element={
               <DetailView />
           }/>
-        <Route path='/cart' element={<div>CARRITO</div>} />
-        <Route path='*' element={<div style={{background:'#f2b'}}>NOT FOUND 404</div>} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='*' element={<Error404 />} />
       </Routes>
       {/*TODO FOOTER*/}
       <Footer />

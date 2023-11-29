@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
-import { Box, Card, CardContent, Fab, TextField, Typography } from '@mui/material';
-import { IconPlus } from '@tabler/icons-react';
+import { Box, Card, CardContent, TextField, Typography } from '@mui/material';
+
+import ItemCounter from './ItemCounter';
 
 
 
@@ -15,7 +16,7 @@ const ItemDetail = ({item}) => {
         </Typography>
         <Box
           sx={{
-            width:'540px',
+            width:'100%',
             height:'430px',
             borderRadius: '1rem',
             backgroundColor: '#f4f4f499',
@@ -27,16 +28,13 @@ const ItemDetail = ({item}) => {
           <img width={'100%'} height={'100%'} src={item.img} style={{objectFit:'contain', borderRadius:'1rem'}} loading="lazy"/>
         </Box>
          
-        <Typography variant="h6" sx={{marginTop:'20px'}}>
+        <Typography variant="h5" sx={{marginTop:'20px'}}>
           Precio: ${item.price ? item.price : '10000'}
         </Typography>
 
-        <Fab variant='extended' sx={{ '& svg': { mr: 1 }, marginTop:'20px' }}>
-          <IconPlus/>
-          Agregar al carrito
-        </Fab>
+        <ItemCounter id={item.id} />
 
-        <Typography variant="h6" sx={{marginTop:'20px'}}>
+        <Typography variant="h5" sx={{marginTop:'20px'}}>
           Descripción:
         </Typography>
 

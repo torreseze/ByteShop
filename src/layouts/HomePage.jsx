@@ -7,27 +7,9 @@ import {collection, getDocs, getFirestore} from 'firebase/firestore'
 import {useKeenSlider} from 'keen-slider/react'
 import '../Slider.css'
 import "keen-slider/keen-slider.min.css"
-import CardMobile from "../components/CardMobile";
+import CardMobile from "../components/CardItem";
 import AppLoader from "./AppLoader";
 
-
-/* const ItemGrilla = ( {item} ) => {
-  return (
-    <Link to={`/detail/${item.id}`}>
-    <Card sx={{width:'100%', height:'450px'}} >
-      <CardContent sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <img width={276} height={300} style={{objectFit:'contain'}} alt={item.name} src={item.img} loading="lazy"/>
-      </CardContent>
-      <CardContent >
-        <Typography gutterBottom variant="h5" component="div" sx={{overflow:'auto'}}>
-        {item.name}
-        </Typography>
-        
-      </CardContent>
-    </Card>
-    </Link>
-  );
-}; */
 
 const HomeGrid = () => {
 

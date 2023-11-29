@@ -1,11 +1,16 @@
 
-import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
+import { AppBar, Badge, IconButton, Toolbar, Typography } from "@mui/material";
 import MenuMaxHeight from "./Menu";
 import { IconShoppingCart } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
 
 
 const Navbar = () => {
+
+  const {cart} = useContext(CartContext)
+
   return (
     <AppBar
     sx={{
@@ -29,7 +34,9 @@ const Navbar = () => {
       </Link>
       <IconButton sx={{ marginLeft: '16px' }}> 
       <Link to={'/cart'}>
+        <Badge badgeContent={cart.length} color="error">
       <IconShoppingCart color="white" size={28}/>
+      </Badge>
       </Link>
       </IconButton>
     </Toolbar>

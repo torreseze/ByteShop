@@ -9,7 +9,7 @@ import {
   query,
   where,
 } from "firebase/firestore";
-import CardMobile from "../CardMobile";
+import CardMobile from "../CardItem";
 import AppLoader from "../../layouts/AppLoader";
 
 const ItemGrid = () => {

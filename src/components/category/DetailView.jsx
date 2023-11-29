@@ -36,7 +36,7 @@ const DetailView = () => {
 
   return (
     <>
-    <Typography variant="h5" style={{ color: "#000", marginBottom:'5px', marginTop:'150px' }}>
+    <Typography variant="h5" style={{ color: "#000", marginBottom:'5px', marginTop:'150px', marginLeft:'5rem' }}>
        <Link to='/' style={{color:'#000'}}>Home</Link> / <Link to={ `/category/${item.category}`} style={{color:'#000'}}>{item.category}</Link> / {item.name}
     </Typography>
     <Grid container>  
