@@ -37,6 +37,7 @@ function CartForm() {
       addDoc(collectionRef, order)
        .then((res)=> toast.success(`La orden ha sido enviada con éxito, su orden es: ${res.id}`))
        .catch((err) => toast.error( `Hubo un error generando la orden. Intente de nuevo : ${err}`))
+      .finally(() => emptyCart)
     };
   
     return (
