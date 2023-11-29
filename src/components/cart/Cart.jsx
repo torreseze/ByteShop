@@ -9,8 +9,6 @@ import CartForm from "./CartForm";
 function Cart() {
   const {cart, cartItems, fetchCartItems, emptyCart } = useContext(CartContext);
 
-  console.log(cartItems);
-
   useEffect(()=> {
     if(cart.length > 0) {
       fetchCartItems()

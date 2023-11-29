@@ -33,8 +33,6 @@ function CartForm() {
         items: cartItems,
         totalPrice: totalPrice
       }
-      
-      console.log(order)
 
       addDoc(collectionRef, order)
        .then((res)=> toast.success(`La orden ha sido enviada con éxito, su orden es: ${res.id}`))
